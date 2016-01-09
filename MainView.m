@@ -8,6 +8,9 @@
 #import "MainView.h"
 #import <AudioToolbox/AudioToolbox.h>
 
+
+
+
 #define BLOCK_COLORS 7
 #define BLOCK_WIDTH screenRect.size.width/10.0f;
 #define BLOCK_HEIGHT screenRect.size.height/24.0f;
@@ -27,11 +30,9 @@ BOOL initial = YES;
 
 Peice *testPeice;
 
+int orient;
 
-//temporary dummy variable
-int orient = 0;
-
-//pasteltris board
+//board
 int pasteltrisBoardBasic[24][10] = {
     {0,0,0,0,0,0,0,0,0,0},
     {0,0,0,0,0,0,0,0,0,0},
@@ -87,8 +88,10 @@ int  copyBoard[24][10] = {
 };
 
 
+
+
+
 - (id)initWithFrame:(CGRect)frame {
-    
     self = [super initWithFrame:frame];
     if (self) {
         //Initialization code
@@ -96,12 +99,10 @@ int  copyBoard[24][10] = {
         drawDuration = 3.0;
     }
     return self;
-    
 }
 
 
 - (void)drawGrid:(CGRect)rect {
-    
     CGRect  screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
@@ -167,32 +168,8 @@ int  copyBoard[24][10] = {
     if(type == 2 && orient == 2)
         return 4;
     
-    //something has gone seriously wrong here o_O
+    //or else something has gone seriously wrong here...
     return -1;
-    
-    //Tests (write these to a test file)
-    /*
-     NSLog(@"Peice height of 1,1 is: %i",[self getPeiceHeight:1 orientation:1]);
-     NSLog(@"Peice height of 1,2 is: %i",[self getPeiceHeight:1 orientation:2]);
-     NSLog(@"Peice height of 1,3 is: %i",[self getPeiceHeight:1 orientation:3]);
-     NSLog(@"Peice height of 1,4 is: %i",[self getPeiceHeight:1 orientation:4]);
-     NSLog(@"Peice height of 2,1 is: %i",[self getPeiceHeight:2 orientation:1]);
-     NSLog(@"Peice height of 2,2 is: %i",[self getPeiceHeight:2 orientation:2]);
-     NSLog(@"Peice height of 3 is: %i",[self getPeiceHeight:3 orientation:0]);
-     NSLog(@"Peice height of 4,1 is: %i",[self getPeiceHeight:4 orientation:1]);
-     NSLog(@"Peice height of 4,2 is: %i",[self getPeiceHeight:4 orientation:2]);
-     NSLog(@"Peice height of 4,3 is: %i",[self getPeiceHeight:4 orientation:3]);
-     NSLog(@"Peice height of 4,4 is: %i",[self getPeiceHeight:4 orientation:4]);
-     NSLog(@"Peice height of 5,1 is: %i",[self getPeiceHeight:5 orientation:1]);
-     NSLog(@"Peice height of 5,2 is: %i",[self getPeiceHeight:5 orientation:2]);
-     NSLog(@"Peice height of 5,3 is: %i",[self getPeiceHeight:5 orientation:3]);
-     NSLog(@"Peice height of 5,4 is: %i",[self getPeiceHeight:5 orientation:4]);
-     NSLog(@"Peice height of 6,1 is: %i",[self getPeiceHeight:6 orientation:1]);
-     NSLog(@"Peice height of 6,2 is: %i",[self getPeiceHeight:6 orientation:2]);
-     NSLog(@"Peice height of 7,1 is: %i",[self getPeiceHeight:7 orientation:1]);
-     NSLog(@"Peice height of 7,2 is: %i",[self getPeiceHeight:7 orientation:2]);
-     */
-    
 }
 
 //This is the main drawing method
@@ -223,7 +200,7 @@ int  copyBoard[24][10] = {
     NSLog(@"Current value of timer is %f", elapsedTime);
     lastDrawTime = gameTimer.timestamp;
     
-    if(elapsedTime >= 10) //This will run forever
+    if(elapsedTime >= 10) //Run forever
         gameOver = YES;
     
     if (gameOver) {
@@ -236,7 +213,7 @@ int  copyBoard[24][10] = {
     //refresh screen
     [self clearScreen:rect];
     
-    //draw the grid
+    //draw grid
     //[self drawGrid:rect];
     
     //Reached bottom?
@@ -255,12 +232,12 @@ int  copyBoard[24][10] = {
     
     // Load all images from the bundle, I added 14 images, named 01.jpg ... 14.jpg
     /*
-    NSMutableArray *images = [NSMutableArray array];
-    [images addObject:[UIImage imageNamed:[NSString stringWithFormat:@"%02d.jpg", 0]]];
-    MLAViewController *picViewController = [[MLAViewController alloc] initWithImages:images];
-    [self presentModalViewController:picViewController animated:YES];
-    [picViewController release];
-*/
+     NSMutableArray *images = [NSMutableArray array];
+     [images addObject:[UIImage imageNamed:[NSString stringWithFormat:@"%02d.jpg", 0]]];
+     MLAViewController *picViewController = [[MLAViewController alloc] initWithImages:images];
+     [self presentModalViewController:picViewController animated:YES];
+     [picViewController release];
+     */
     
     //update board
     [self drawBoard:rect game_board:pasteltrisBoardBasic];
@@ -278,6 +255,7 @@ int  copyBoard[24][10] = {
     
     //sleep interval
     [NSThread sleepForTimeInterval:0.1f];
+    
     //NSLog(@"Beginning");
     //[self printArray];
     [self copyArray];
@@ -287,12 +265,11 @@ int  copyBoard[24][10] = {
     //NSLog(@"After Elimination");
     //[self printArray];
     //NSLog(@"After Pushdown");
-    [self pushDown];
     //[self printArray];
-    
+    [self pushDown];
 }
 
-//wrapper mathod to refresh display (in drawRect)
+//wrapper method to refresh display in drawRect
 - (void) refresh:(CGRect)rect {
     [self setNeedsDisplay];
 }
@@ -363,7 +340,7 @@ int  copyBoard[24][10] = {
     
 }
 
-//method to clear the screen (white)
+//clear the screen (white)
 - (void) clearScreen:(CGRect)rect {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
@@ -382,129 +359,121 @@ int  copyBoard[24][10] = {
 }
 
 
-/* SUCESSFUL for across values! */
+/* Remove similarly colored horizontal neighbor blocks */
 - (void) eliminateNeighborsAcross {
-	int xpos = 0, ypos = 0;
-	for(ypos = 0; ypos < 24; ypos++) {
-		for(xpos = 9; xpos >= 0; xpos--) {
-			//eliminate horizontal neighbors
-			if(pasteltrisBoardBasic[ypos][xpos] == pasteltrisBoardBasic[ypos][xpos-1] && pasteltrisBoardBasic[ypos][xpos] != 0) {
-				while(pasteltrisBoardBasic[ypos][xpos] == pasteltrisBoardBasic[ypos][xpos-1] && xpos-1 >= 0) {
-					printf("X:%i Y:%i\n",xpos+1,ypos+1);
-					pasteltrisBoardBasic[ypos][xpos] = 9;
-					if(xpos-1 >= 0) {
-						xpos--;
-					}
-					else {
-						break;
-					}
-				}
-				printf("X:%i Y:%i\n",ypos+1,xpos+1);;
-				pasteltrisBoardBasic[ypos][xpos] = 9;
-			}
-		}
-	}
+    int xpos = 0, ypos = 0;
+    for(ypos = 0; ypos < 24; ypos++) {
+        for(xpos = 9; xpos >= 0; xpos--) {
+            //eliminate horizontal neighbors
+            if(pasteltrisBoardBasic[ypos][xpos] == pasteltrisBoardBasic[ypos][xpos-1] && pasteltrisBoardBasic[ypos][xpos] != 0) {
+                while(pasteltrisBoardBasic[ypos][xpos] == pasteltrisBoardBasic[ypos][xpos-1] && xpos-1 >= 0) {
+                    printf("X:%i Y:%i\n",xpos+1,ypos+1);
+                    pasteltrisBoardBasic[ypos][xpos] = 9;
+                    if(xpos-1 >= 0) {
+                        xpos--;
+                    }
+                    else {
+                        break;
+                    }
+                }
+                printf("X:%i Y:%i\n",ypos+1,xpos+1);;
+                pasteltrisBoardBasic[ypos][xpos] = 9;
+            }
+        }
+    }
 }
 
 
-/* SUCESSFUL for vertical values! */
+/* Remove similarly colored vertical neighbor blocks */
 - (void) eliminateNeighborsVertical {
-	int xpos = 0, ypos = 0, count = 0;
-	//eliminate vertical neighbors
-	for(xpos = 9; xpos >=0; xpos--) {
-		for(ypos = 23; ypos >= 0; ypos-- ) {
+    int xpos = 0, ypos = 0, count = 0;
+    //eliminate vertical neighbors
+    for(xpos = 9; xpos >=0; xpos--) {
+        for(ypos = 23; ypos >= 0; ypos-- ) {
             //CODE ADDED
-			if(pasteltrisBoardBasic[ypos][xpos] == pasteltrisBoardBasic[ypos-1][xpos] && ypos-1 >= 0 && pasteltrisBoardBasic[ypos][xpos] != 0) {
-				while(pasteltrisBoardBasic[ypos][xpos] == pasteltrisBoardBasic[ypos-1-count][xpos] && ypos-1-count >= 0) {
-					pasteltrisBoardBasic[ypos-1-count][xpos] = 9;
-					count++;;
-				}
-			}
-			count = 0;
-			//CODE ADDED END
-			if(pasteltrisBoardBasic[ypos][xpos] == 9) {
-				while(pasteltrisBoardBasic[ypos-1][xpos] == copyBoard[ypos][xpos] && ypos-1 >= 0) {
-					pasteltrisBoardBasic[ypos-1][xpos] = 9;
-					if(ypos-1 >= 0) {
-						ypos--;
-					}
-					else {
-						break;
-					}
-				}
-				
-				while(pasteltrisBoardBasic[ypos+1][xpos] == copyBoard[ypos][xpos] && ypos+1 < 24) {
-					pasteltrisBoardBasic[ypos+1][xpos] = 9;
-					if(ypos+1 < 24) {
-						ypos++;
-					}
-					else {
-						break;
-					}
-				}
-			}
-		}
-	}
+            if(pasteltrisBoardBasic[ypos][xpos] == pasteltrisBoardBasic[ypos-1][xpos] && ypos-1 >= 0 && pasteltrisBoardBasic[ypos][xpos] != 0) {
+                while(pasteltrisBoardBasic[ypos][xpos] == pasteltrisBoardBasic[ypos-1-count][xpos] && ypos-1-count >= 0) {
+                    pasteltrisBoardBasic[ypos-1-count][xpos] = 9;
+                    count++;;
+                }
+            }
+            count = 0;
+            //CODE ADDED END
+            if(pasteltrisBoardBasic[ypos][xpos] == 9) {
+                while(pasteltrisBoardBasic[ypos-1][xpos] == copyBoard[ypos][xpos] && ypos-1 >= 0) {
+                    pasteltrisBoardBasic[ypos-1][xpos] = 9;
+                    if(ypos-1 >= 0) {
+                        ypos--;
+                    }
+                    else {
+                        break;
+                    }
+                }
+                
+                while(pasteltrisBoardBasic[ypos+1][xpos] == copyBoard[ypos][xpos] && ypos+1 < 24) {
+                    pasteltrisBoardBasic[ypos+1][xpos] = 9;
+                    if(ypos+1 < 24) {
+                        ypos++;
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+        }
+    }
 }
 
-
+/* Drop blocks to the lowest possible position */
 - (void) pushDown {
-	int x,y,i,entered = 0,count = 0;
-	for(x = 0; x < 10; x++) {
-		for(y = 23; y >=0; y--) {
-			if(pasteltrisBoardBasic[y][x] == 9) {
-				entered = 1;
-				while(pasteltrisBoardBasic[y-count][x] == 9) { //until there are no 9s
-					count++;
-					if(y-count < 0) //if 9s all the way to the top, exit
-						break;
-				}
-				for(i = 0; i < y; i++) {
-					if(y-count-i >= 0) {
-						pasteltrisBoardBasic[y-i][x] = pasteltrisBoardBasic[y-count-i][x];
-					}
-				}
-				for(i = count - 1; i >= 0; i--)
-					pasteltrisBoardBasic[i][x] = 0;
-			}
-		}
+    int x,y,i,entered = 0,count = 0;
+    for(x = 0; x < 10; x++) {
+        for(y = 23; y >=0; y--) {
+            if(pasteltrisBoardBasic[y][x] == 9) {
+                entered = 1;
+                while(pasteltrisBoardBasic[y-count][x] == 9) { //until there are no 9s
+                    count++;
+                    if(y-count < 0) //if 9s all the way to the top, exit
+                        break;
+                }
+                for(i = 0; i < y; i++) {
+                    if(y-count-i >= 0) {
+                        pasteltrisBoardBasic[y-i][x] = pasteltrisBoardBasic[y-count-i][x];
+                    }
+                }
+                for(i = count - 1; i >= 0; i--)
+                    pasteltrisBoardBasic[i][x] = 0;
+            }
+        }
         count = 0;
-	}
+    }
 }
 
+//helper method
 - (void) copyArray {
-	int x = 0 ,y = 0;
-	for(y = 0; y < 24; y++) {
-		for(x = 0; x < 10; x++) {
-			copyBoard[y][x] = pasteltrisBoardBasic[y][x];
-		}
-	}
+    int x = 0 ,y = 0;
+    for(y = 0; y < 24; y++) {
+        for(x = 0; x < 10; x++) {
+            copyBoard[y][x] = pasteltrisBoardBasic[y][x];
+        }
+    }
     
 }
 
+//helper method 2
 - (void) printArray {
-	int x,y;
-	for(y = 0; y < 24; y++) {
-		for(x = 0; x < 10; x++) {
-			printf("%i",pasteltrisBoardBasic[y][x]);
-		}
+    int x,y;
+    for(y = 0; y < 24; y++) {
+        for(x = 0; x < 10; x++) {
+            printf("%i",pasteltrisBoardBasic[y][x]);
+        }
         printf("\n");
-	}
-	printf("\n");
-}
-
-// System Sound <AudioToolbox/AudioToolbox.h> Not tested yet
--(void) playSound {
-    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"bubble" ofType:@"mp3"];
-    SystemSoundID soundID;
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath: soundPath], &soundID);
-    AudioServicesPlaySystemSound (soundID);
-    //[soundPath release];
+    }
+    printf("\n");
 }
 
 
 
-//getter and setters - do this with @synthesize
 - (int) getBlockPositionX { return blockPositionX; }
 - (int) getBlockPositionY { return blockPositionY; }
 - (int) getScreenRatioAdjustWidth { return SCREEN_RATIO_ADJUST_WIDTH; }
@@ -512,7 +481,4 @@ int  copyBoard[24][10] = {
 
 - (void) setBlockPositionX: (int) newPosition { blockPositionX = newPosition; }
 - (void) setBlockPositionY: (int) newPosition { blockPositionY = newPosition; }
-
-
-
 @end

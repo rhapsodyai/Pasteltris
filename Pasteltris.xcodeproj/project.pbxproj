@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571843751C4153B900F0AD2B /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571843741C4153B900F0AD2B /* AudioController.m */; };
+		573002EB1C415AE5005D6F37 /* retrogamecenter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 573002EA1C415AE5005D6F37 /* retrogamecenter.mp3 */; };
+		573002ED1C415B08005D6F37 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 573002EC1C415B08005D6F37 /* pew-pew-lei.caf */; };
+		573002EF1C415B26005D6F37 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 573002EE1C415B26005D6F37 /* pew-pew-lei.caf */; };
+		573002F11C415B3F005D6F37 /* retrogamecenter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 573002F01C415B3F005D6F37 /* retrogamecenter.mp3 */; };
 		630B0B7A198AFBBB00555A83 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 630B0B79198AFBBB00555A83 /* Block.m */; };
 		630B35AC19497CFE0043682C /* HiScores.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 630B35AA19497CFD0043682C /* HiScores.xcdatamodeld */; };
 		630EE3E619A7F64400AF4A90 /* SoundDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EE3E519A7F64400AF4A90 /* SoundDriver.m */; };
@@ -45,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5707FB7E1C415366008F1CE4 /* AudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		571843741C4153B900F0AD2B /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		573002EA1C415AE5005D6F37 /* retrogamecenter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = retrogamecenter.mp3; path = ../retrogamecenter.mp3; sourceTree = "<group>"; };
+		573002EC1C415B08005D6F37 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "../../Downloads/ATBasicSounds/pew-pew-lei.caf"; sourceTree = "<group>"; };
+		573002EE1C415B26005D6F37 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "../../Downloads/ATBasicSounds/pew-pew-lei.caf"; sourceTree = "<group>"; };
+		573002F01C415B3F005D6F37 /* retrogamecenter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = retrogamecenter.mp3; path = ../retrogamecenter.mp3; sourceTree = "<group>"; };
 		630B0B78198AFBBB00555A83 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		630B0B79198AFBBB00555A83 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 		630B35AB19497CFD0043682C /* HiScores.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HiScores.xcdatamodel; sourceTree = "<group>"; };
@@ -110,22 +121,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		638D16371949849300C088B3 /* OpenGL */ = {
+		638D16371949849300C088B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				573002F01C415B3F005D6F37 /* retrogamecenter.mp3 */,
+				573002EE1C415B26005D6F37 /* pew-pew-lei.caf */,
 			);
-			name = OpenGL;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		63BCD1A81948D0EC009E6770 = {
 			isa = PBXGroup;
 			children = (
 				630B35AA19497CFD0043682C /* HiScores.xcdatamodeld */,
+				573002EA1C415AE5005D6F37 /* retrogamecenter.mp3 */,
+				573002EC1C415B08005D6F37 /* pew-pew-lei.caf */,
 				63BCD1BA1948D0EC009E6770 /* Pasteltris */,
 				63BCD1DC1948D0EC009E6770 /* PasteltrisTests */,
 				63BCD1B31948D0EC009E6770 /* Frameworks */,
 				63BCD1B21948D0EC009E6770 /* Products */,
-				638D16371949849300C088B3 /* OpenGL */,
+				638D16371949849300C088B3 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +171,8 @@
 		63BCD1BA1948D0EC009E6770 /* Pasteltris */ = {
 			isa = PBXGroup;
 			children = (
+				571843741C4153B900F0AD2B /* AudioController.m */,
+				5707FB7E1C415366008F1CE4 /* AudioController.h */,
 				63BCD1EC1948D13E009E6770 /* MainView.h */,
 				63BCD1ED1948D13E009E6770 /* MainView.m */,
 				635403D8199D4E2D003E53B2 /* DirectDraw.h */,
@@ -284,10 +301,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573002F11C415B3F005D6F37 /* retrogamecenter.mp3 in Resources */,
+				573002EF1C415B26005D6F37 /* pew-pew-lei.caf in Resources */,
 				63BCD1CB1948D0EC009E6770 /* Main_iPad.storyboard in Resources */,
+				573002EB1C415AE5005D6F37 /* retrogamecenter.mp3 in Resources */,
 				63BCD1D01948D0EC009E6770 /* Images.xcassets in Resources */,
 				63BCD1C81948D0EC009E6770 /* Main_iPhone.storyboard in Resources */,
 				63BCD1BF1948D0EC009E6770 /* InfoPlist.strings in Resources */,
+				573002ED1C415B08005D6F37 /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				571843751C4153B900F0AD2B /* AudioController.m in Sources */,
 				632EA8AD198467C300554959 /* Peice.m in Sources */,
 				630B35AC19497CFE0043682C /* HiScores.xcdatamodeld in Sources */,
 				630EE3E619A7F64400AF4A90 /* SoundDriver.m in Sources */,

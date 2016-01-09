@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		630B0B7A198AFBBB00555A83 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 630B0B79198AFBBB00555A83 /* Block.m */; };
+		630B35AC19497CFE0043682C /* HiScores.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 630B35AA19497CFD0043682C /* HiScores.xcdatamodeld */; };
+		630EE3E619A7F64400AF4A90 /* SoundDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EE3E519A7F64400AF4A90 /* SoundDriver.m */; };
+		630EE3E819A7F83500AF4A90 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630EE3E719A7F83500AF4A90 /* AudioToolbox.framework */; };
+		632EA8AD198467C300554959 /* Peice.m in Sources */ = {isa = PBXBuildFile; fileRef = 632EA8AC198467C300554959 /* Peice.m */; };
+		632EA8AF1984823A00554959 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632EA8AE1984823A00554959 /* AVFoundation.framework */; };
+		6352F0F81981F2F8007FF8C2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6352F0F71981F2F8007FF8C2 /* QuartzCore.framework */; };
+		635403DA199D4E2D003E53B2 /* DirectDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 635403D9199D4E2D003E53B2 /* DirectDraw.m */; };
+		638D16331949822E00C088B3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638D16321949822E00C088B3 /* CoreData.framework */; };
+		63BCD1B51948D0EC009E6770 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BCD1B41948D0EC009E6770 /* Foundation.framework */; };
+		63BCD1B71948D0EC009E6770 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BCD1B61948D0EC009E6770 /* CoreGraphics.framework */; };
+		63BCD1B91948D0EC009E6770 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BCD1B81948D0EC009E6770 /* UIKit.framework */; };
+		63BCD1BF1948D0EC009E6770 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63BCD1BD1948D0EC009E6770 /* InfoPlist.strings */; };
+		63BCD1C11948D0EC009E6770 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BCD1C01948D0EC009E6770 /* main.m */; };
+		63BCD1C51948D0EC009E6770 /* MLAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BCD1C41948D0EC009E6770 /* MLAAppDelegate.m */; };
+		63BCD1C81948D0EC009E6770 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BCD1C61948D0EC009E6770 /* Main_iPhone.storyboard */; };
+		63BCD1CB1948D0EC009E6770 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BCD1C91948D0EC009E6770 /* Main_iPad.storyboard */; };
+		63BCD1CE1948D0EC009E6770 /* MLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BCD1CD1948D0EC009E6770 /* MLAViewController.m */; };
+		63BCD1D01948D0EC009E6770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BCD1CF1948D0EC009E6770 /* Images.xcassets */; };
+		63BCD1D71948D0EC009E6770 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BCD1D61948D0EC009E6770 /* XCTest.framework */; };
+		63BCD1D81948D0EC009E6770 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BCD1B41948D0EC009E6770 /* Foundation.framework */; };
+		63BCD1D91948D0EC009E6770 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BCD1B81948D0EC009E6770 /* UIKit.framework */; };
+		63BCD1E11948D0EC009E6770 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63BCD1DF1948D0EC009E6770 /* InfoPlist.strings */; };
+		63BCD1E31948D0EC009E6770 /* PasteltrisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BCD1E21948D0EC009E6770 /* PasteltrisTests.m */; };
+		63BCD1EE1948D13E009E6770 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BCD1ED1948D13E009E6770 /* MainView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63BCD1DA1948D0EC009E6770 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63BCD1A91948D0EC009E6770 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63BCD1B01948D0EC009E6770;
+			remoteInfo = Pasteltris;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		630B0B78198AFBBB00555A83 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		630B0B79198AFBBB00555A83 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		630B35AB19497CFD0043682C /* HiScores.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HiScores.xcdatamodel; sourceTree = "<group>"; };
+		630EE3E419A7F64400AF4A90 /* SoundDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundDriver.h; sourceTree = "<group>"; };
+		630EE3E519A7F64400AF4A90 /* SoundDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundDriver.m; sourceTree = "<group>"; };
+		630EE3E719A7F83500AF4A90 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		632EA8AB198467C300554959 /* Peice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peice.h; sourceTree = "<group>"; };
+		632EA8AC198467C300554959 /* Peice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Peice.m; sourceTree = "<group>"; };
+		632EA8AE1984823A00554959 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6352F0F71981F2F8007FF8C2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		635403D8199D4E2D003E53B2 /* DirectDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectDraw.h; sourceTree = "<group>"; };
+		635403D9199D4E2D003E53B2 /* DirectDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectDraw.m; sourceTree = "<group>"; };
+		638D16321949822E00C088B3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		63BCD1B11948D0EC009E6770 /* Pasteltris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pasteltris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BCD1B41948D0EC009E6770 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63BCD1B61948D0EC009E6770 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63BCD1B81948D0EC009E6770 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63BCD1BC1948D0EC009E6770 /* Pasteltris-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pasteltris-Info.plist"; sourceTree = "<group>"; };
+		63BCD1BE1948D0EC009E6770 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63BCD1C01948D0EC009E6770 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63BCD1C21948D0EC009E6770 /* Pasteltris-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pasteltris-Prefix.pch"; sourceTree = "<group>"; };
+		63BCD1C31948D0EC009E6770 /* MLAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLAAppDelegate.h; sourceTree = "<group>"; };
+		63BCD1C41948D0EC009E6770 /* MLAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLAAppDelegate.m; sourceTree = "<group>"; };
+		63BCD1C71948D0EC009E6770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		63BCD1CA1948D0EC009E6770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		63BCD1CC1948D0EC009E6770 /* MLAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLAViewController.h; sourceTree = "<group>"; };
+		63BCD1CD1948D0EC009E6770 /* MLAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLAViewController.m; sourceTree = "<group>"; };
+		63BCD1CF1948D0EC009E6770 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		63BCD1D51948D0EC009E6770 /* PasteltrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasteltrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BCD1D61948D0EC009E6770 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		63BCD1DE1948D0EC009E6770 /* PasteltrisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PasteltrisTests-Info.plist"; sourceTree = "<group>"; };
+		63BCD1E01948D0EC009E6770 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63BCD1E21948D0EC009E6770 /* PasteltrisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasteltrisTests.m; sourceTree = "<group>"; };
+		63BCD1EC1948D13E009E6770 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = ../MainView.h; sourceTree = "<group>"; };
+		63BCD1ED1948D13E009E6770 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = ../MainView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63BCD1AE1948D0EC009E6770 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630EE3E819A7F83500AF4A90 /* AudioToolbox.framework in Frameworks */,
+				632EA8AF1984823A00554959 /* AVFoundation.framework in Frameworks */,
+				6352F0F81981F2F8007FF8C2 /* QuartzCore.framework in Frameworks */,
+				638D16331949822E00C088B3 /* CoreData.framework in Frameworks */,
+				63BCD1B71948D0EC009E6770 /* CoreGraphics.framework in Frameworks */,
+				63BCD1B91948D0EC009E6770 /* UIKit.framework in Frameworks */,
+				63BCD1B51948D0EC009E6770 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BCD1D21948D0EC009E6770 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BCD1D71948D0EC009E6770 /* XCTest.framework in Frameworks */,
+				63BCD1D91948D0EC009E6770 /* UIKit.framework in Frameworks */,
+				63BCD1D81948D0EC009E6770 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		638D16371949849300C088B3 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OpenGL;
+			sourceTree = "<group>";
+		};
+		63BCD1A81948D0EC009E6770 = {
+			isa = PBXGroup;
+			children = (
+				630B35AA19497CFD0043682C /* HiScores.xcdatamodeld */,
+				63BCD1BA1948D0EC009E6770 /* Pasteltris */,
+				63BCD1DC1948D0EC009E6770 /* PasteltrisTests */,
+				63BCD1B31948D0EC009E6770 /* Frameworks */,
+				63BCD1B21948D0EC009E6770 /* Products */,
+				638D16371949849300C088B3 /* OpenGL */,
+			);
+			sourceTree = "<group>";
+		};
+		63BCD1B21948D0EC009E6770 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63BCD1B11948D0EC009E6770 /* Pasteltris.app */,
+				63BCD1D51948D0EC009E6770 /* PasteltrisTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63BCD1B31948D0EC009E6770 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				630EE3E719A7F83500AF4A90 /* AudioToolbox.framework */,
+				632EA8AE1984823A00554959 /* AVFoundation.framework */,
+				6352F0F71981F2F8007FF8C2 /* QuartzCore.framework */,
+				638D16321949822E00C088B3 /* CoreData.framework */,
+				63BCD1B41948D0EC009E6770 /* Foundation.framework */,
+				63BCD1B61948D0EC009E6770 /* CoreGraphics.framework */,
+				63BCD1B81948D0EC009E6770 /* UIKit.framework */,
+				63BCD1D61948D0EC009E6770 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63BCD1BA1948D0EC009E6770 /* Pasteltris */ = {
+			isa = PBXGroup;
+			children = (
+				63BCD1EC1948D13E009E6770 /* MainView.h */,
+				63BCD1ED1948D13E009E6770 /* MainView.m */,
+				635403D8199D4E2D003E53B2 /* DirectDraw.h */,
+				635403D9199D4E2D003E53B2 /* DirectDraw.m */,
+				630B0B78198AFBBB00555A83 /* Block.h */,
+				630B0B79198AFBBB00555A83 /* Block.m */,
+				630EE3E419A7F64400AF4A90 /* SoundDriver.h */,
+				630EE3E519A7F64400AF4A90 /* SoundDriver.m */,
+				632EA8AB198467C300554959 /* Peice.h */,
+				632EA8AC198467C300554959 /* Peice.m */,
+				63BCD1C31948D0EC009E6770 /* MLAAppDelegate.h */,
+				63BCD1C41948D0EC009E6770 /* MLAAppDelegate.m */,
+				63BCD1C61948D0EC009E6770 /* Main_iPhone.storyboard */,
+				63BCD1C91948D0EC009E6770 /* Main_iPad.storyboard */,
+				63BCD1CC1948D0EC009E6770 /* MLAViewController.h */,
+				63BCD1CD1948D0EC009E6770 /* MLAViewController.m */,
+				63BCD1CF1948D0EC009E6770 /* Images.xcassets */,
+				63BCD1BB1948D0EC009E6770 /* Supporting Files */,
+			);
+			path = Pasteltris;
+			sourceTree = "<group>";
+		};
+		63BCD1BB1948D0EC009E6770 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63BCD1BC1948D0EC009E6770 /* Pasteltris-Info.plist */,
+				63BCD1BD1948D0EC009E6770 /* InfoPlist.strings */,
+				63BCD1C01948D0EC009E6770 /* main.m */,
+				63BCD1C21948D0EC009E6770 /* Pasteltris-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63BCD1DC1948D0EC009E6770 /* PasteltrisTests */ = {
+			isa = PBXGroup;
+			children = (
+				63BCD1E21948D0EC009E6770 /* PasteltrisTests.m */,
+				63BCD1DD1948D0EC009E6770 /* Supporting Files */,
+			);
+			path = PasteltrisTests;
+			sourceTree = "<group>";
+		};
+		63BCD1DD1948D0EC009E6770 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63BCD1DE1948D0EC009E6770 /* PasteltrisTests-Info.plist */,
+				63BCD1DF1948D0EC009E6770 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63BCD1B01948D0EC009E6770 /* Pasteltris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63BCD1E61948D0EC009E6770 /* Build configuration list for PBXNativeTarget "Pasteltris" */;
+			buildPhases = (
+				63BCD1AD1948D0EC009E6770 /* Sources */,
+				63BCD1AE1948D0EC009E6770 /* Frameworks */,
+				63BCD1AF1948D0EC009E6770 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pasteltris;
+			productName = Pasteltris;
+			productReference = 63BCD1B11948D0EC009E6770 /* Pasteltris.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63BCD1D41948D0EC009E6770 /* PasteltrisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63BCD1E91948D0EC009E6770 /* Build configuration list for PBXNativeTarget "PasteltrisTests" */;
+			buildPhases = (
+				63BCD1D11948D0EC009E6770 /* Sources */,
+				63BCD1D21948D0EC009E6770 /* Frameworks */,
+				63BCD1D31948D0EC009E6770 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63BCD1DB1948D0EC009E6770 /* PBXTargetDependency */,
+			);
+			name = PasteltrisTests;
+			productName = PasteltrisTests;
+			productReference = 63BCD1D51948D0EC009E6770 /* PasteltrisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63BCD1A91948D0EC009E6770 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VRCubed;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = VRCubed;
+				TargetAttributes = {
+					63BCD1D41948D0EC009E6770 = {
+						TestTargetID = 63BCD1B01948D0EC009E6770;
+					};
+				};
+			};
+			buildConfigurationList = 63BCD1AC1948D0EC009E6770 /* Build configuration list for PBXProject "Pasteltris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63BCD1A81948D0EC009E6770;
+			productRefGroup = 63BCD1B21948D0EC009E6770 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63BCD1B01948D0EC009E6770 /* Pasteltris */,
+				63BCD1D41948D0EC009E6770 /* PasteltrisTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63BCD1AF1948D0EC009E6770 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BCD1CB1948D0EC009E6770 /* Main_iPad.storyboard in Resources */,
+				63BCD1D01948D0EC009E6770 /* Images.xcassets in Resources */,
+				63BCD1C81948D0EC009E6770 /* Main_iPhone.storyboard in Resources */,
+				63BCD1BF1948D0EC009E6770 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BCD1D31948D0EC009E6770 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BCD1E11948D0EC009E6770 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63BCD1AD1948D0EC009E6770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632EA8AD198467C300554959 /* Peice.m in Sources */,
+				630B35AC19497CFE0043682C /* HiScores.xcdatamodeld in Sources */,
+				630EE3E619A7F64400AF4A90 /* SoundDriver.m in Sources */,
+				63BCD1C11948D0EC009E6770 /* main.m in Sources */,
+				63BCD1EE1948D13E009E6770 /* MainView.m in Sources */,
+				630B0B7A198AFBBB00555A83 /* Block.m in Sources */,
+				63BCD1CE1948D0EC009E6770 /* MLAViewController.m in Sources */,
+				63BCD1C51948D0EC009E6770 /* MLAAppDelegate.m in Sources */,
+				635403DA199D4E2D003E53B2 /* DirectDraw.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BCD1D11948D0EC009E6770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BCD1E31948D0EC009E6770 /* PasteltrisTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63BCD1DB1948D0EC009E6770 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63BCD1B01948D0EC009E6770 /* Pasteltris */;
+			targetProxy = 63BCD1DA1948D0EC009E6770 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63BCD1BD1948D0EC009E6770 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63BCD1BE1948D0EC009E6770 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63BCD1C61948D0EC009E6770 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63BCD1C71948D0EC009E6770 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		63BCD1C91948D0EC009E6770 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63BCD1CA1948D0EC009E6770 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		63BCD1DF1948D0EC009E6770 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63BCD1E01948D0EC009E6770 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63BCD1E41948D0EC009E6770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63BCD1E51948D0EC009E6770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63BCD1E71948D0EC009E6770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pasteltris/Pasteltris-Prefix.pch";
+				INFOPLIST_FILE = "Pasteltris/Pasteltris-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MLA.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63BCD1E81948D0EC009E6770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pasteltris/Pasteltris-Prefix.pch";
+				INFOPLIST_FILE = "Pasteltris/Pasteltris-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MLA.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		63BCD1EA1948D0EC009E6770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pasteltris.app/Pasteltris";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pasteltris/Pasteltris-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PasteltrisTests/PasteltrisTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "MLA.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		63BCD1EB1948D0EC009E6770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pasteltris.app/Pasteltris";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pasteltris/Pasteltris-Prefix.pch";
+				INFOPLIST_FILE = "PasteltrisTests/PasteltrisTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "MLA.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63BCD1AC1948D0EC009E6770 /* Build configuration list for PBXProject "Pasteltris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BCD1E41948D0EC009E6770 /* Debug */,
+				63BCD1E51948D0EC009E6770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63BCD1E61948D0EC009E6770 /* Build configuration list for PBXNativeTarget "Pasteltris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BCD1E71948D0EC009E6770 /* Debug */,
+				63BCD1E81948D0EC009E6770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63BCD1E91948D0EC009E6770 /* Build configuration list for PBXNativeTarget "PasteltrisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BCD1EA1948D0EC009E6770 /* Debug */,
+				63BCD1EB1948D0EC009E6770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		630B35AA19497CFD0043682C /* HiScores.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				630B35AB19497CFD0043682C /* HiScores.xcdatamodel */,
+			);
+			currentVersion = 630B35AB19497CFD0043682C /* HiScores.xcdatamodel */;
+			path = HiScores.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 63BCD1A91948D0EC009E6770 /* Project object */;
+}
